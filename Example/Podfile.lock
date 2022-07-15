@@ -1,0 +1,22 @@
+PODS:
+  - FastAppService (0.1.0):
+    - FastExtension
+  - FastExtension (0.1.0)
+
+DEPENDENCIES:
+  - FastAppService (from `../`)
+  - FastExtension (from `../../FastExtension`)
+
+EXTERNAL SOURCES:
+  FastAppService:
+    :path: "../"
+  FastExtension:
+    :path: "../../FastExtension"
+
+SPEC CHECKSUMS:
+  FastAppService: 1d3dbe02411e7adc60adb92cacd0f70f67d06fec
+  FastExtension: adf21c62d514be110c9a7cf911472d0dde8a536c
+
+PODFILE CHECKSUM: baebac8c9bc1fb900597c6082ed69feceebb10fa
+
+COCOAPODS: 1.11.2
