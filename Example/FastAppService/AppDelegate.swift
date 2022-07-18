@@ -13,10 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.launchWidow()
+        
         return true
+    }
+    
+    func launchWidow() {
+        if self.window == nil {
+            self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        }
+        let navi = UINavigationController.init(rootViewController: CaseListController.init(style: .plain))
+        self.window?.rootViewController = navi
+        self.window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.author           = { 'zhangpan' => 'zhangpan@cls.cn' }
   s.source           = { :git => 'https://github.com/zhangpan/FastAppService.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'FastAppService/Classes/**/*'
   

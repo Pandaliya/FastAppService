@@ -2,10 +2,16 @@ PODS:
   - FastAppService (0.1.0):
     - FastExtension
   - FastExtension (0.1.0)
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - FastAppService (from `../`)
   - FastExtension (from `../../FastExtension`)
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SnapKit
 
 EXTERNAL SOURCES:
   FastAppService:
@@ -16,7 +22,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FastAppService: 1d3dbe02411e7adc60adb92cacd0f70f67d06fec
   FastExtension: adf21c62d514be110c9a7cf911472d0dde8a536c
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: baebac8c9bc1fb900597c6082ed69feceebb10fa
+PODFILE CHECKSUM: b303c1a64c30876f1e1411c138eccbbc5168e8d3
 
 COCOAPODS: 1.11.2
