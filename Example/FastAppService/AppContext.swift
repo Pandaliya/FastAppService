@@ -7,6 +7,7 @@
 //
 
 import Foundation
+@_exported import CoreData
 @_exported import FastExtension
 @_exported import SnapKit
 
@@ -17,10 +18,28 @@ class AppContext {
     }()
     private init() {}
     
+    @available(iOS 13.0, *)
+    var coreDataContext: NSManagedObjectContext? {
+        if let delegate = UIApplication.shared.delegate as? AppDelegate{
+            return delegate.persistentContainer.viewContext
+        }
+        return nil
+    }
+    
+    @available(iOS 13.0, *)
+    var container: NSPersistentCloudKitContainer? {
+        if let delegate = UIApplication.shared.delegate as? AppDelegate{
+            return delegate.persistentContainer
+        }
+        return nil
+    }
+    
+    
     // Singleton code
     // ...
 }
 
+let AC = AppContext.shared
 extension AppContext: NSCopying {
     func copy(with zone: NSZone? = nil) -> Any {
         return self

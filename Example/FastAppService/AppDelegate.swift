@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import CoreData
+import FastAppService
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.launchWidow()
+        
+        if #available(iOS 13.0, *) {
+            FastCoreData.shared.autoMergeChange(container: self.persistentContainer)
+        } else {
+            
+        }
         
         return true
     }
@@ -50,7 +58,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    // MARK: - Core Data
+    @available(iOS 13.0, *)
+    lazy var persistentContainer: NSPersistentCloudKitContainer = {
+        let container = NSPersistentCloudKitContainer(name: "FastCloud")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        
+        let description = container.persistentStoreDescriptions.first
+        description?.setOption(true as NSNumber,
+                                       forKey: NSPersistentHistoryTrackingKey)
+        
+        let remoteChangeKey = "NSPersistentStoreRemoteChangeNotificationOptionKey"
+        description?.setOption(true as NSNumber, forKey: remoteChangeKey)
+        
+        return container
+    }()
+    
+    private func testfunc() {
+//        NSPersistentContainer
+//        NSPersistentStoreCoordinator
+//        NSPersistentStoreDescription
+//        NSPersistentCloudKitContainerOptions
+//        container.persistentStoreDescriptions
+    }
 
 }
 

@@ -20,10 +20,10 @@ EXTERNAL SOURCES:
     :path: "../../FastExtension"
 
 SPEC CHECKSUMS:
-  FastAppService: 1d3dbe02411e7adc60adb92cacd0f70f67d06fec
+  FastAppService: 28c3380383213690ae165781da763811f5eca7f5
   FastExtension: adf21c62d514be110c9a7cf911472d0dde8a536c
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: b303c1a64c30876f1e1411c138eccbbc5168e8d3
+PODFILE CHECKSUM: cddc4e65c877e31e0522bef567f5575aa080b36f
 
 COCOAPODS: 1.11.2

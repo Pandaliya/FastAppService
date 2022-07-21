@@ -5,6 +5,7 @@
 //  Created by zhang pan on 2022/7/17.
 //  Copyright © 2022 CocoaPods. All rights reserved.
 //
+// 测试 Sign with Apple
 
 import Foundation
 import UIKit

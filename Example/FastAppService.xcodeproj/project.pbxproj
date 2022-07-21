@@ -11,23 +11,30 @@
 		3B43ED952883FC0400594209 /* AppCaseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43ED942883FC0400594209 /* AppCaseSet.swift */; };
 		3B43ED972883FF7C00594209 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43ED962883FF7C00594209 /* CaseViewController.swift */; };
 		3B8667032882BAF600EDAB9F /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8667022882BAF600EDAB9F /* AppContext.swift */; };
-		428D7E9991C510CEFB564493 /* Pods_FastAppService_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62236B54D81FF05A229747DB /* Pods_FastAppService_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* CaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* CaseListController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B4D7E76B2886977700B58749 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D7E76A2886977700B58749 /* CloudKit.framework */; };
+		B4D7E76E2886983300B58749 /* FastCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E76C2886983300B58749 /* FastCloud.xcdatamodeld */; };
+		B4D7E7712886A3DE00B58749 /* DataCloudCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7702886A3DE00B58749 /* DataCloudCase.swift */; };
+		B4D7E7752886A4B600B58749 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7732886A4B600B58749 /* User+CoreDataProperties.swift */; };
+		B4D7E7762886A4B600B58749 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7742886A4B600B58749 /* User+CoreDataClass.swift */; };
+		B4D7E7782886A68000B58749 /* CaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7772886A67F00B58749 /* CaseTableViewController.swift */; };
+		C333E8895FC3B5FFC2AFE453 /* Pods_FAService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABEE2DA21CCF4AE64EF3BFB /* Pods_FAService.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05F08FD352A8AAC3A6EDC790 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1146361E5522CAFB8189CFAF /* Pods-FastAppService_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAppService_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FastAppService_Tests/Pods-FastAppService_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B01ABC3185FA6528EC5FC0A /* FastAppService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FastAppService.podspec; path = ../FastAppService.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2ABEE2DA21CCF4AE64EF3BFB /* Pods_FAService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FAService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B43ED922883F6F200594209 /* AppleSignCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignCase.swift; sourceTree = "<group>"; };
 		3B43ED942883FC0400594209 /* AppCaseSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCaseSet.swift; sourceTree = "<group>"; };
 		3B43ED962883FF7C00594209 /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
 		3B8667022882BAF600EDAB9F /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		558912E23486DC0D4FD616BE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* FastAppService_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastAppService_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* FAService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* CaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListController.swift; sourceTree = "<group>"; };
@@ -35,9 +42,21 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		62236B54D81FF05A229747DB /* Pods_FastAppService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastAppService_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90533BC1B38DA60DDCE97B30 /* Pods-FastAppService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAppService_Example.debug.xcconfig"; path = "Target Support Files/Pods-FastAppService_Example/Pods-FastAppService_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B43770722888FCE9002FAD0B /* CloudkitError.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CloudkitError.md; sourceTree = "<group>"; };
+		B437707328892F7D002FAD0B /* CloudKitTips.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CloudKitTips.md; sourceTree = "<group>"; };
+		B4D7E76928865FD600B58749 /* FastAppService.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = FastAppService.entitlements; sourceTree = SOURCE_ROOT; };
+		B4D7E76A2886977700B58749 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B4D7E76D2886983300B58749 /* FastCloud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FastCloud.xcdatamodel; sourceTree = "<group>"; };
+		B4D7E76F2886987D00B58749 /* CloudKitSOP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CloudKitSOP.md; sourceTree = "<group>"; };
+		B4D7E7702886A3DE00B58749 /* DataCloudCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCloudCase.swift; sourceTree = "<group>"; };
+		B4D7E7732886A4B600B58749 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B4D7E7742886A4B600B58749 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B4D7E7772886A67F00B58749 /* CaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseTableViewController.swift; sourceTree = "<group>"; };
+		B4F5870F28864772000B6111 /* SignWithApple.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SignWithApple.md; sourceTree = "<group>"; };
 		B8FC0AB18303D162E061DA4C /* Pods-FastAppService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAppService_Tests.release.xcconfig"; path = "Target Support Files/Pods-FastAppService_Tests/Pods-FastAppService_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C19CC14B772D0134CC8B2BEB /* Pods-FAService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAService.release.xcconfig"; path = "Target Support Files/Pods-FAService/Pods-FAService.release.xcconfig"; sourceTree = "<group>"; };
+		CEE9CA0E5F0FDCFA843DF07D /* Pods-FAService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAService.debug.xcconfig"; path = "Target Support Files/Pods-FAService/Pods-FAService.debug.xcconfig"; sourceTree = "<group>"; };
 		E252D0CBD677ADE371588CDA /* Pods_FastAppService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastAppService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF261DF2885369A9C7E0967B /* Pods-FastAppService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAppService_Example.release.xcconfig"; path = "Target Support Files/Pods-FastAppService_Example/Pods-FastAppService_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,7 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428D7E9991C510CEFB564493 /* Pods_FastAppService_Example.framework in Frameworks */,
+				C333E8895FC3B5FFC2AFE453 /* Pods_FAService.framework in Frameworks */,
+				B4D7E76B2886977700B58749 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +79,7 @@
 			children = (
 				607FACD71AFB9204008FA782 /* CaseListController.swift */,
 				3B43ED962883FF7C00594209 /* CaseViewController.swift */,
+				B4D7E7772886A67F00B58749 /* CaseTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -68,6 +89,7 @@
 			children = (
 				3B43ED922883F6F200594209 /* AppleSignCase.swift */,
 				3B43ED942883FC0400594209 /* AppCaseSet.swift */,
+				B4D7E7702886A3DE00B58749 /* DataCloudCase.swift */,
 			);
 			path = Cases;
 			sourceTree = "<group>";
@@ -79,6 +101,8 @@
 				EF261DF2885369A9C7E0967B /* Pods-FastAppService_Example.release.xcconfig */,
 				1146361E5522CAFB8189CFAF /* Pods-FastAppService_Tests.debug.xcconfig */,
 				B8FC0AB18303D162E061DA4C /* Pods-FastAppService_Tests.release.xcconfig */,
+				CEE9CA0E5F0FDCFA843DF07D /* Pods-FAService.debug.xcconfig */,
+				C19CC14B772D0134CC8B2BEB /* Pods-FAService.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -86,6 +110,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				B4F5870E2886475B000B6111 /* Markdown */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -98,7 +123,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* FastAppService_Example.app */,
+				607FACD01AFB9204008FA782 /* FAService.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +131,7 @@
 		607FACD21AFB9204008FA782 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				B4D7E7722886A48200B58749 /* CoreDataModel */,
 				3B8667022882BAF600EDAB9F /* AppContext.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				3B8667012882BA6500EDAB9F /* Cases */,
@@ -119,9 +145,11 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4D7E76928865FD600B58749 /* FastAppService.entitlements */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				B4D7E76C2886983300B58749 /* FastCloud.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -156,18 +184,40 @@
 		AD6AE1E9D10F96A7F60B43AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62236B54D81FF05A229747DB /* Pods_FastAppService_Example.framework */,
+				B4D7E76A2886977700B58749 /* CloudKit.framework */,
 				E252D0CBD677ADE371588CDA /* Pods_FastAppService_Tests.framework */,
+				2ABEE2DA21CCF4AE64EF3BFB /* Pods_FAService.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4D7E7722886A48200B58749 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4D7E7742886A4B600B58749 /* User+CoreDataClass.swift */,
+				B4D7E7732886A4B600B58749 /* User+CoreDataProperties.swift */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		B4F5870E2886475B000B6111 /* Markdown */ = {
+			isa = PBXGroup;
+			children = (
+				B4F5870F28864772000B6111 /* SignWithApple.md */,
+				B4D7E76F2886987D00B58749 /* CloudKitSOP.md */,
+				B43770722888FCE9002FAD0B /* CloudkitError.md */,
+				B437707328892F7D002FAD0B /* CloudKitTips.md */,
+			);
+			name = Markdown;
+			path = ../Markdown;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* FastAppService_Example */ = {
+		607FACCF1AFB9204008FA782 /* FAService */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FastAppService_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FAService" */;
 			buildPhases = (
 				99E0D5C0258D428756763E20 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -179,9 +229,9 @@
 			);
 			dependencies = (
 			);
-			name = FastAppService_Example;
+			name = FAService;
 			productName = FastAppService;
-			productReference = 607FACD01AFB9204008FA782 /* FastAppService_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* FAService.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -198,6 +248,7 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = RHNL57UU8L;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -215,7 +266,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* FastAppService_Example */,
+				607FACCF1AFB9204008FA782 /* FAService */,
 			);
 		};
 /* End PBXProject section */
@@ -239,7 +290,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastAppService_Example/Pods-FastAppService_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FAService/Pods-FAService-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FastAppService/FastAppService.framework",
 				"${BUILT_PRODUCTS_DIR}/FastExtension/FastExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -252,7 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastAppService_Example/Pods-FastAppService_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FAService/Pods-FAService-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		99E0D5C0258D428756763E20 /* [CP] Check Pods Manifest.lock */ = {
@@ -270,7 +321,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FastAppService_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FAService-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -286,10 +337,15 @@
 			files = (
 				607FACD81AFB9204008FA782 /* CaseListController.swift in Sources */,
 				3B43ED952883FC0400594209 /* AppCaseSet.swift in Sources */,
+				B4D7E7782886A68000B58749 /* CaseTableViewController.swift in Sources */,
 				3B43ED972883FF7C00594209 /* CaseViewController.swift in Sources */,
+				B4D7E7712886A3DE00B58749 /* DataCloudCase.swift in Sources */,
+				B4D7E7762886A4B600B58749 /* User+CoreDataClass.swift in Sources */,
 				3B43ED932883F6F200594209 /* AppleSignCase.swift in Sources */,
 				3B8667032882BAF600EDAB9F /* AppContext.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B4D7E76E2886983300B58749 /* FastCloud.xcdatamodeld in Sources */,
+				B4D7E7752886A4B600B58749 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,15 +464,20 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90533BC1B38DA60DDCE97B30 /* Pods-FastAppService_Example.debug.xcconfig */;
+			baseConfigurationReference = CEE9CA0E5F0FDCFA843DF07D /* Pods-FAService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FastAppService.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHNL57UU8L;
 				INFOPLIST_FILE = FastAppService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.page3App.FastAppService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -424,15 +485,19 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF261DF2885369A9C7E0967B /* Pods-FastAppService_Example.release.xcconfig */;
+			baseConfigurationReference = C19CC14B772D0134CC8B2BEB /* Pods-FAService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FastAppService.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHNL57UU8L;
 				INFOPLIST_FILE = FastAppService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.page3App.FastAppService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -450,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FastAppService_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FAService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -460,6 +525,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B4D7E76C2886983300B58749 /* FastCloud.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B4D7E76D2886983300B58749 /* FastCloud.xcdatamodel */,
+			);
+			currentVersion = B4D7E76D2886983300B58749 /* FastCloud.xcdatamodel */;
+			path = FastCloud.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }
