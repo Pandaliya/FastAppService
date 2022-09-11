@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             self.window = UIWindow.init(frame: UIScreen.main.bounds)
         }
         let navi = UINavigationController.init(rootViewController: CaseListController.init(style: .plain))
+        AC.rootController = navi
         self.window?.rootViewController = navi
         self.window?.makeKeyAndVisible()
     }

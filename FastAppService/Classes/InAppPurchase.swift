@@ -6,5 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
+
 
 

@@ -8,4 +8,5 @@ target 'FAService' do
   
   pod 'FastAppService', :path => '../'
   pod 'FastExtension', :path => "../../FastExtension"
+  pod 'FastLocalize', :path => "../../FastLocalize"
 end

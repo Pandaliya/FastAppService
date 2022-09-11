@@ -16,6 +16,9 @@ class AppContext {
         let sha = AppContext()
         return sha
     }()
+    
+    var rootController: UIViewController? = nil
+    
     private init() {}
     
     @available(iOS 13.0, *)

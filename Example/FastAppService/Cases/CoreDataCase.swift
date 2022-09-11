@@ -1,5 +1,5 @@
 //
-//  DataCloudCase.swift
+//  CoreDataCase.swift
 //  FAService
 //
 //  Created by pan zhang on 2022/7/19.
@@ -12,8 +12,8 @@ import UIKit
 import CoreData
 import FastAppService
 
-class DataCloudCase: NSObject, ExampleCase {
-    var title: String = "iCloud"
+class CoreDataCase: NSObject, ExampleCase {
+    var title: String = "CoreData & iCloud"
     var callBack: (() -> ())? = nil
     var users: [User] = []
     
@@ -98,7 +98,7 @@ class DataCloudCase: NSObject, ExampleCase {
     
 }
 
-extension DataCloudCase: UITableViewDelegate, UITableViewDataSource {
+extension CoreDataCase: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }

@@ -15,9 +15,11 @@
 		607FACD81AFB9204008FA782 /* CaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* CaseListController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B47DFDBF288E3B4900FFD12D /* LocationCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47DFDBE288E3B4900FFD12D /* LocationCase.swift */; };
+		B4A3E592288A7E0D0072C6D3 /* CloudCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A3E591288A7E0D0072C6D3 /* CloudCase.swift */; };
 		B4D7E76B2886977700B58749 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D7E76A2886977700B58749 /* CloudKit.framework */; };
 		B4D7E76E2886983300B58749 /* FastCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E76C2886983300B58749 /* FastCloud.xcdatamodeld */; };
-		B4D7E7712886A3DE00B58749 /* DataCloudCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7702886A3DE00B58749 /* DataCloudCase.swift */; };
+		B4D7E7712886A3DE00B58749 /* CoreDataCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7702886A3DE00B58749 /* CoreDataCase.swift */; };
 		B4D7E7752886A4B600B58749 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7732886A4B600B58749 /* User+CoreDataProperties.swift */; };
 		B4D7E7762886A4B600B58749 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7742886A4B600B58749 /* User+CoreDataClass.swift */; };
 		B4D7E7782886A68000B58749 /* CaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7772886A67F00B58749 /* CaseTableViewController.swift */; };
@@ -45,11 +47,13 @@
 		90533BC1B38DA60DDCE97B30 /* Pods-FastAppService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastAppService_Example.debug.xcconfig"; path = "Target Support Files/Pods-FastAppService_Example/Pods-FastAppService_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B43770722888FCE9002FAD0B /* CloudkitError.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CloudkitError.md; sourceTree = "<group>"; };
 		B437707328892F7D002FAD0B /* CloudKitTips.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CloudKitTips.md; sourceTree = "<group>"; };
+		B47DFDBE288E3B4900FFD12D /* LocationCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCase.swift; sourceTree = "<group>"; };
+		B4A3E591288A7E0D0072C6D3 /* CloudCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCase.swift; sourceTree = "<group>"; };
 		B4D7E76928865FD600B58749 /* FastAppService.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = FastAppService.entitlements; sourceTree = SOURCE_ROOT; };
 		B4D7E76A2886977700B58749 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B4D7E76D2886983300B58749 /* FastCloud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FastCloud.xcdatamodel; sourceTree = "<group>"; };
 		B4D7E76F2886987D00B58749 /* CloudKitSOP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CloudKitSOP.md; sourceTree = "<group>"; };
-		B4D7E7702886A3DE00B58749 /* DataCloudCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCloudCase.swift; sourceTree = "<group>"; };
+		B4D7E7702886A3DE00B58749 /* CoreDataCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCase.swift; sourceTree = "<group>"; };
 		B4D7E7732886A4B600B58749 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B4D7E7742886A4B600B58749 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B4D7E7772886A67F00B58749 /* CaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseTableViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +93,9 @@
 			children = (
 				3B43ED922883F6F200594209 /* AppleSignCase.swift */,
 				3B43ED942883FC0400594209 /* AppCaseSet.swift */,
-				B4D7E7702886A3DE00B58749 /* DataCloudCase.swift */,
+				B4D7E7702886A3DE00B58749 /* CoreDataCase.swift */,
+				B4A3E591288A7E0D0072C6D3 /* CloudCase.swift */,
+				B47DFDBE288E3B4900FFD12D /* LocationCase.swift */,
 			);
 			path = Cases;
 			sourceTree = "<group>";
@@ -293,12 +299,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-FAService/Pods-FAService-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FastAppService/FastAppService.framework",
 				"${BUILT_PRODUCTS_DIR}/FastExtension/FastExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/FastLocalize/FastLocalize.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastAppService.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastLocalize.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,10 +344,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* CaseListController.swift in Sources */,
+				B4A3E592288A7E0D0072C6D3 /* CloudCase.swift in Sources */,
+				B47DFDBF288E3B4900FFD12D /* LocationCase.swift in Sources */,
 				3B43ED952883FC0400594209 /* AppCaseSet.swift in Sources */,
 				B4D7E7782886A68000B58749 /* CaseTableViewController.swift in Sources */,
 				3B43ED972883FF7C00594209 /* CaseViewController.swift in Sources */,
-				B4D7E7712886A3DE00B58749 /* DataCloudCase.swift in Sources */,
+				B4D7E7712886A3DE00B58749 /* CoreDataCase.swift in Sources */,
 				B4D7E7762886A4B600B58749 /* User+CoreDataClass.swift in Sources */,
 				3B43ED932883F6F200594209 /* AppleSignCase.swift in Sources */,
 				3B8667032882BAF600EDAB9F /* AppContext.swift in Sources */,

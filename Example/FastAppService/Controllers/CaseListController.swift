@@ -24,15 +24,25 @@ class CaseListController: ExampleCaseTableController {
             sign.routerToContoller(from: self)
         }
         
-        let cloud = DataCloudCase.init(callBack: nil)
-        cloud.callBack = {[weak self] in
+        let coredata = CoreDataCase.init(callBack: nil)
+        coredata.callBack = {[weak self] in
             guard let self = self else { return }
-            cloud.routerToContoller(from: self)
+            coredata.routerToContoller(from: self)
+        }
+        
+        let cloud = CloudCase.init {
+            debugPrint("controller call back")
+        }
+        
+        let location = LocationCase.init {
+            debugPrint("controller call back")
         }
         
         let cases:[ExampleCase] = [
             sign,
-            cloud
+            coredata,
+            cloud,
+            location
         ]
         
         let appleServiceSet = AppCaseSet.init(title: "苹果服务", fold: false)
