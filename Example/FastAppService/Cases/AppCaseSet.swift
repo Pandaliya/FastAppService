@@ -24,4 +24,24 @@ class AppCaseSet: ExampleCaseSet {
         self.setTitle = title
         self.isFold = fold
     }
+    
+    static var defaultSet: ExampleCaseSet {
+        let ds = AppCaseSet.init(title: "苹果服务", fold: false)
+        
+        let sign = AppleSignCase.init()
+        let coredata = CoreDataCase.init()
+        let cloud = CloudCase.init()
+        let location = LocationCase.init()
+        let password = PasswordCase()
+        
+        ds.cases = [
+            password,
+            sign,
+            coredata,
+            cloud,
+            location
+        ]
+        
+        return ds
+    }
 }

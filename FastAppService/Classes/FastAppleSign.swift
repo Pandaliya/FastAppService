@@ -1,5 +1,5 @@
 //
-//  SignWithApple.swift
+//  FastAppleSign.swift
 //  FastAppService
 //
 //  Created by pan zhang on 2022/7/15.
@@ -32,9 +32,9 @@ public struct AppleAuthInfo {
 }
 
 @available(iOS 13.0, *)
-open class SignWithApple: NSObject {
-    public static var shared: SignWithApple = {
-        let sha = SignWithApple()
+open class FastAppleSign: NSObject {
+    public static var shared: FastAppleSign = {
+        let sha = FastAppleSign()
         return sha
     }()
     private override init() {}
@@ -60,10 +60,6 @@ open class SignWithApple: NSObject {
         var requests: [ASAuthorizationRequest] = []
         requests.append(request)
         
-        // 第一次调用授权是会失败
-//        let passwordRequest = ASAuthorizationPasswordProvider().createRequest()
-//        requests.append(passwordRequest)
-        
         let controller = ASAuthorizationController.init(authorizationRequests: requests)
         controller.delegate = self
         controller.presentationContextProvider = self
@@ -73,7 +69,7 @@ open class SignWithApple: NSObject {
 }
 
 @available(iOS 13.0, *)
-extension SignWithApple: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+extension FastAppleSign: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     
     // 授权失败
     public func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
@@ -167,7 +163,7 @@ extension SignWithApple: ASAuthorizationControllerDelegate, ASAuthorizationContr
 }
 
 @available(iOS 13.0, *)
-extension SignWithApple: NSCopying {
+extension FastAppleSign: NSCopying {
     public func copy(with zone: NSZone? = nil) -> Any {
         return self
     }

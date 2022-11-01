@@ -17,6 +17,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		B47DFDBF288E3B4900FFD12D /* LocationCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47DFDBE288E3B4900FFD12D /* LocationCase.swift */; };
 		B4A3E592288A7E0D0072C6D3 /* CloudCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A3E591288A7E0D0072C6D3 /* CloudCase.swift */; };
+		B4AE8AE52910C0A3002E81AC /* PasswordCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AE8AE42910C0A3002E81AC /* PasswordCase.swift */; };
 		B4D7E76B2886977700B58749 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D7E76A2886977700B58749 /* CloudKit.framework */; };
 		B4D7E76E2886983300B58749 /* FastCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E76C2886983300B58749 /* FastCloud.xcdatamodeld */; };
 		B4D7E7712886A3DE00B58749 /* CoreDataCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E7702886A3DE00B58749 /* CoreDataCase.swift */; };
@@ -49,6 +50,7 @@
 		B437707328892F7D002FAD0B /* CloudKitTips.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CloudKitTips.md; sourceTree = "<group>"; };
 		B47DFDBE288E3B4900FFD12D /* LocationCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCase.swift; sourceTree = "<group>"; };
 		B4A3E591288A7E0D0072C6D3 /* CloudCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCase.swift; sourceTree = "<group>"; };
+		B4AE8AE42910C0A3002E81AC /* PasswordCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCase.swift; sourceTree = "<group>"; };
 		B4D7E76928865FD600B58749 /* FastAppService.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = FastAppService.entitlements; sourceTree = SOURCE_ROOT; };
 		B4D7E76A2886977700B58749 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B4D7E76D2886983300B58749 /* FastCloud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FastCloud.xcdatamodel; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				B4D7E7702886A3DE00B58749 /* CoreDataCase.swift */,
 				B4A3E591288A7E0D0072C6D3 /* CloudCase.swift */,
 				B47DFDBE288E3B4900FFD12D /* LocationCase.swift */,
+				B4AE8AE42910C0A3002E81AC /* PasswordCase.swift */,
 			);
 			path = Cases;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				3B8667032882BAF600EDAB9F /* AppContext.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				B4D7E76E2886983300B58749 /* FastCloud.xcdatamodeld in Sources */,
+				B4AE8AE52910C0A3002E81AC /* PasswordCase.swift in Sources */,
 				B4D7E7752886A4B600B58749 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

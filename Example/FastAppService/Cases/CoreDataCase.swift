@@ -73,13 +73,8 @@ class CoreDataCase: NSObject, ExampleCase {
             callBack()
         }
         debugPrint("\(type(of: self))  Executing: case action")
-//        FastAppleCloud.shared.createPrivateZone()
-        if #available(iOS 13.0, *) {
-//            self.docSchema()
-        } else {
-            
-        }
         
+        self.routerToContoller()
         return true
     }
     

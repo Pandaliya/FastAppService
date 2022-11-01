@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         self.launchWidow()
         
         if #available(iOS 13.0, *) {
-            FastCoreData.shared.autoMergeChange(container: self.persistentContainer)
+            // FastCoreData.shared.autoMergeChange(container: self.persistentContainer)
         } else {
             
         }
@@ -61,9 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     // MARK: - Core Data
-    @available(iOS 13.0, *)
-    lazy var persistentContainer: NSPersistentCloudKitContainer = {
-        let container = NSPersistentCloudKitContainer(name: "FastCloud")
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "FastCloud")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -71,8 +70,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         })
         
         let description = container.persistentStoreDescriptions.first
-        description?.setOption(true as NSNumber,
-                                       forKey: NSPersistentHistoryTrackingKey)
+        if #available(iOS 11.0, *) {
+            description?.setOption(true as NSNumber,
+                                   forKey: NSPersistentHistoryTrackingKey)
+        } else {
+            // Fallback on earlier versions
+        }
         
         let remoteChangeKey = "NSPersistentStoreRemoteChangeNotificationOptionKey"
         description?.setOption(true as NSNumber, forKey: remoteChangeKey)

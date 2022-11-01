@@ -27,12 +27,14 @@ class AppleSignCase: ExampleCase {
             callBack()
         }
         debugPrint("\(type(of: self))  Executing: case action")
+        
+        self.routerToContoller()
         return true
     }
     
     func configView(view: UIView) -> Bool {
         if #available(iOS 13.0.0, *) {
-            if let btn = SignWithApple.shared.signButton{
+            if let btn = FastAppleSign.shared.signButton{
                 view.addSubview(btn)
                 btn.snp.makeConstraints { make in
                     make.centerX.equalToSuperview()

@@ -1,6 +1,7 @@
 PODS:
   - FastAppService (0.1.0):
     - FastExtension
+    - FastLocalize
   - FastExtension (0.1.0)
   - FastLocalize (0.1.0)
   - SnapKit (5.6.0)
@@ -24,11 +25,11 @@ EXTERNAL SOURCES:
     :path: "../../FastLocalize"
 
 SPEC CHECKSUMS:
-  FastAppService: 28c3380383213690ae165781da763811f5eca7f5
+  FastAppService: d8bc50760e395621b370506787572a6ea21dab16
   FastExtension: adf21c62d514be110c9a7cf911472d0dde8a536c
   FastLocalize: 8bce5cd81bf9575943b7f560506ebd37518801fe
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: 95242fa4f9812bad34209c80006774b8ff8f532d
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

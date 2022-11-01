@@ -32,7 +32,7 @@ class AppContext {
     @available(iOS 13.0, *)
     var container: NSPersistentCloudKitContainer? {
         if let delegate = UIApplication.shared.delegate as? AppDelegate{
-            return delegate.persistentContainer
+            return delegate.persistentContainer as? NSPersistentCloudKitContainer
         }
         return nil
     }

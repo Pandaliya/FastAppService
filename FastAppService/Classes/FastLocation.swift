@@ -12,19 +12,70 @@ public struct FastCoordinate {
     let latitude: Double   // 经度
     let longitude: Double  // 纬度
     let altitude: Double   // 高度
+    
+    public static func createWithLocation(location: CLLocation) -> FastCoordinate {
+        return self.init(
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude,
+            altitude: location.altitude
+        )
+    }
 }
 
-public protocol FastLocationDelegate {
+public struct FateGeoInfo {
+    let mark: CLPlacemark
+    
+    var country: String? // 国家
+    var city: String?    // 城市
+    var area: String?    // 区县
+    var address: String? // 街道地址
+    
+    init(mark: CLPlacemark) {
+        self.mark = mark
+        self.country = mark.country
+        self.city = mark.locality
+        self.area = mark.subLocality
+        self.address = mark.thoroughfare
+    }
     
 }
 
+public protocol FastLocationDelegate: AnyObject {
+    func locationUpdate(coordinate: FastCoordinate)
+    func geoInfoUpdate(place: FateGeoInfo)
+}
+
+public extension FastLocationDelegate {
+    func geoInfoUpdate(place: FateGeoInfo) {
+        let mark = place.mark
+        let address = "\(mark.locality ?? "")\(mark.subLocality ?? "")\(mark.name ?? "")"
+        debugPrint(
+        """
+        城市: \(mark.locality ?? "nil")
+        国家: \(mark.country ?? "nil")
+        位置: \(mark.subLocality ?? "nil")
+        街道: \(mark.thoroughfare ?? "nil")
+        具体地址: \(mark.name ?? "nil")
+        完整地址: \(address)
+        """)
+    }
+    func locationUpdate(coordinate: FastCoordinate) {
+        debugPrint("locationUpdate: 经度：\(coordinate.latitude)； 纬度: \(coordinate.longitude); 高度: \(coordinate.altitude)")
+    }
+}
+
 public final class FastLocation: NSObject {
+    
     public static var shared: FastLocation = {
         let sha = FastLocation()
         return sha
     }()
     
     private override init() {}
+    
+    private var locationCallback: ((CLLocation?, Error?)->())? = nil
+    private weak var delegate: FastLocationDelegate? = nil
+    private var geoEnable: Bool = false
     
     lazy var locationManager: CLLocationManager = {
         let lm = CLLocationManager()
@@ -33,7 +84,6 @@ public final class FastLocation: NSObject {
         lm.distanceFilter = 100.0
         return lm
     }()
-    
     
     public static func checkLocationLimit(showAlert: Bool = false) -> Bool {
         // 检查定位服务是否开启
@@ -64,13 +114,22 @@ public final class FastLocation: NSObject {
         UIWindow.fe.currentWindow?.rootViewController?.present(alert, animated: true)
     }
     
+    public func updateGeoEnable(enable:Bool) {
+        self.geoEnable = enable
+    }
+    
+    public func replaceDelegate(_ delegate: FastLocationDelegate? = nil) {
+        self.delegate = delegate
+    }
+    
     /// 开启位置监控
-    public func startLocationMinitor() {
+    public func startLocationMinitor(completion: ((CLLocation?, Error?)->())? = nil) {
         guard FastLocation.checkLocationLimit() else {
             return
         }
         
         self.locationManager.requestWhenInUseAuthorization()
+        self.locationCallback = completion
         locationManager.startUpdatingLocation()
     }
 }
@@ -87,23 +146,33 @@ extension FastLocation: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         debugPrint("didUpdateLocations:", locations)
         guard let currLocation = locations.last else {
+            // 未获取位置信息
+            if let c = self.locationCallback {
+                c(nil, nil)
+                self.locationCallback = nil // 打破循环引用
+            }
             return
         }
         
-        debugPrint("经度：\(currLocation.coordinate.latitude)； 纬度: \(currLocation.coordinate.longitude); 高度: \(currLocation.altitude)")
-        let c: FastCoordinate = FastCoordinate.init(
-            latitude: currLocation.coordinate.latitude,
-            longitude: currLocation.coordinate.longitude,
-            altitude: currLocation.altitude
-        )
-        debugPrint("Coordinate: ", c)
+        if let c = self.locationCallback {
+            c(currLocation, nil)
+            self.locationCallback = nil // 打破循环引用
+        }
         
-        self.geoDecode(location: currLocation)
+        if let d = self.delegate {
+            d.locationUpdate(coordinate: FastCoordinate.createWithLocation(location: currLocation))
+        }
+        
+        if self.geoEnable  {
+            self.geoDecode(location: currLocation)
+        }
     }
     
     public func geoDecode(location: CLLocation) {
         let geo = CLGeocoder()
-        geo.reverseGeocodeLocation(location) { placeMarks, err in
+        geo.reverseGeocodeLocation(location) {[weak self] placeMarks, err in
+            guard let self = self else { return }
+            
             guard err == nil else {
                 debugPrint("GEO reverseGeocodeLocation error", err!)
                 return
@@ -113,23 +182,17 @@ extension FastLocation: CLLocationManagerDelegate {
                 return
             }
             
-            let address = "\(mark.locality ?? "")\(mark.subLocality ?? "")\(mark.name ?? "")"
-            debugPrint(
-            """
-            城市: \(mark.locality ?? "nil")
-            国家: \(mark.country ?? "nil")
-            位置: \(mark.subLocality ?? "nil")
-            街道: \(mark.thoroughfare ?? "nil")
-            具体地址: \(mark.name ?? "nil")
-            完整地址: \(address)
-            """)
-            
-            debugPrint(mark)
+            if let d = self.delegate {
+                d.geoInfoUpdate(place: FateGeoInfo.init(mark: mark))
+            }
         }
     }
     
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         debugPrint("locationManager didFailWithError: ", error )
+        if let c = self.locationCallback {
+            c(nil, error)
+            self.locationCallback = nil // 打破循环引用
+        }
     }
-    
 }
